@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ครูและบุคลากร</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="logo.png" alt="โลโก้โรงเรียนวัชรวิทยา" class="logo">
+          </a>
+          <span class="school-name">โรงเรียนวัชรวิทยา</span> 
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">หน้าแรก</a></li>
+    
+          <!-- Dropdown เมนูเกี่ยวกับ -->
+          <li class="dropdown">
+            <span class="dropbtn">เกี่ยวกับ วร.</span>
+            <span class="dropdown-arrow">&#x2193;</span> <!-- ลูกศร -->
+            <div class="dropdown-content">
+              <a href="history.html">ประวัติโรงเรียน</a>
+              <a href="identity.html">อัตลักษณ์วัชรวิทยา</a>
+            </div>
+          </li>
+    
+          <li><a href="personnel.html">เพิ่มเติม</a></li>
+        </ul>
+      </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h1>ครูและบุคลากร</h1>
+            <p>
+                ติดต่อกับครูและบุคลากรของโรงเรียนวัชรวิทยาได้ตามรายละเอียดดังนี้:
+            </p>
+            <p><strong>Email:</strong> <a href="mailto:16964@wr.ac.th">16964@wr.ac.th</a></p>
+            <p><strong>โทรศัพท์:</strong> 088-282-6194</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; โรงเรียนวัชรวิทยา 93 ถนนเทศบาล 2 ตำบลในเมือง อำเภอเมืองกำแพงเพชร จังหวัดกำแพงเพชร 62000 โทรศัพท์ 055 711 901
+            <br> จัดทำโดยนายนิติรัฐ พรมฤทธิ์ นักเรียนชั้นมัธยมศึกษาปีที่ 6/3</p>
+    </footer>
+
+    <!-- Scroll Function for Footer -->
+    <script>
+        window.onscroll = function () {
+            const footer = document.getElementById('footer');
+            if (window.scrollY > 100) {
+                footer.classList.remove('hidden'); // แสดง footer เมื่อเลื่อนลงมา
+            } else {
+                footer.classList.add('hidden'); // ซ่อน footer เมื่อเลื่อนขึ้น
+            }
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+body {
+  font-family: 'Kanit', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px; /* แก้ไขค่า height เป็น 60px */
+  margin-right: 15px;
+}
+
+.school-name {
+  font-size: 1.5rem;
+  color: #ed008c;
+  font-weight: bold;
+}
+
+/* เมนู */
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 10px;
+  position: relative;
+}
+
+/* ลักษณะเมนูหลัก */
+.menu li a {
+    color: #ed008c; /* สีปกติ */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s ease, color 0.3s ease; /* เพิ่ม transition สำหรับการเปลี่ยนสี */
+  }
+  
+  .menu li a:hover {
+    background: #ed008c; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    border-radius: 5px;
+    color: #fff; /* เปลี่ยนสีตัวหนังสือเป็นขาวเมื่อ hover */
+  }
+  
+
+/* สำหรับปุ่ม dropdown */
+.dropdown .dropbtn {
+    color: #ed008c;
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: default;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    border-radius: 5px; /* เพิ่มความโค้งมนให้กับปุ่ม dropdown */
+  }
+  
+  .dropdown .dropdown-arrow {
+    color: #ed008c;
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(173, 173, 173, 0.2);
+    border-radius: 8px; /* เพิ่มความโค้งมน */
+    opacity: 0; /* เริ่มต้นให้เป็นโปร่งใส */
+    transition: opacity 0.3s ease-in-out; /* เพิ่มการเปลี่ยนแปลงของความโปร่งใส */
+  }
+  
+  .dropdown-content a {
+    color: #333; /* เปลี่ยนสีตัวอักษรในเมนู dropdown */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px; /* ทำให้เมนูย่อยมีมุมโค้งมน */
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1; /* สีเมื่อ hover */
+    color: #ed008c; /* สีข้อความเมื่อ hover */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1; /* เปลี่ยนความโปร่งใสเมื่อเมาส์อยู่บน */
+  }
+  
+  .dropdown:hover .dropbtn,
+  .dropdown:hover .dropdown-arrow {
+    background-color: #ed008c;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+  /* ลบลูกศรใน dropdown */
+.dropdown .dropdown-arrow {
+    display: none; /* ซ่อนลูกศร */
+  }
+  
+  .dropdown:hover .dropdown-arrow {
+    display: none; /* ซ่อนลูกศรเมื่อ hover */
+  }
+  
+/* ปกเฮด */
+.header {
+    background-image: url('wrbg.png'); /* ใส่ URL รูปภาพที่ต้องการ */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* ปรับความสูงของปกเฮด */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  
+  .header-content {
+    z-index: 1;
+    padding: 20px;
+  }
+  
+  .header h1 {
+    font-size: 1.75rem;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  .header h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .header p {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 7px 0;
+  }
+
+  .director-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin:  0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .director-box h3 {
+    color: #0da9e2;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .director-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .director-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #0da9e2;
+  }
+  
+  .director-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .director-details h4 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .director-details p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+
+/* Slideshow */
+.slideshow {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url('image1.jpg');
+  animation: slideshow 20s infinite;
+}
+
+@keyframes slideshow {
+  0% { background-image: url('image1.jpg'); }
+  33% { background-image: url('image2.jpg'); }
+  66% { background-image: url('image3.jpg'); }
+  100% { background-image: url('image1.jpg'); }
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* กล่องเมนู */
+.menu-boxes {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-boxes h3 {
+    font-size: 1.6rem;
+    color: #0da9e2;
+    margin-bottom: 20px;
+}
+
+.theboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box {
+    width: 22%; /* ขนาดกล่อง */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px); /* เพิ่มการเลื่อนขึ้น */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาเมื่อ hover */
+}
+
+.inner {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.inner:hover {
+    background-color: #0da9e2; /* สีพื้นหลังเมื่อ hover */
+}
+
+.inner img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.inner h5 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 45%; /* ขนาดกล่องในหน้าจอเล็ก */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%; /* ขนาดกล่องเต็มความกว้างในหน้าจอมือถือ */
+    }
+}
+
+/* ลบเส้นใต้จากลิงก์ทั้งหมด */
+a {
+    text-decoration: none !important;
+}
+
+/* ช่องข่าวประชาสัมพันธ์ */
+.news-section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-section h3 {
+    font-size: 1.6rem;
+    color: #0da9e2;
+    margin-bottom: 20px;
+  }
+  
+  .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .news-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .news-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .news-item h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .news-item p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .news-item a {
+    font-size: 0.9rem;
+    color: #0da9e2;
+    text-decoration: none;
+  }
+  
+  .news-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* สำหรับรูปภาพในข่าว */
+  .news-image {
+    width: 100%;
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วนของภาพ */
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* สำหรับขนาดหน้าจอเล็ก */
+  @media (max-width: 768px) {
+    .news-item {
+      width: 100%; /* ให้ข่าวแต่ละข่าวเต็มความกว้าง */
+    }
+  }
+  
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: -150px;
+  transition: bottom 0.3s ease;
+}
+
+footer.hidden {
+  bottom: -150px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Scroll effect for footer visibility */
+body {
+  padding-bottom: 150px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu li {
+    margin: 5px 0;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
+
